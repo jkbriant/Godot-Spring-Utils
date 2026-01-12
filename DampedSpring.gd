@@ -5,9 +5,6 @@ var _vel: float = 0.0
 
 var _params := SpringUtils.DampedSpringMotionParams.new()
 
-
-# --- Godot-style read-only properties ---
-
 var position: float:
 	get:
 		return _pos
@@ -16,20 +13,13 @@ var velocity: float:
 	get:
 		return _vel
 
-
-# --- Optional helpers ---
-
 func reset(value: float) -> void:
 	_pos = value
 	_vel = 0.0
 
-
 func set_state(pos: float, vel: float = 0.0) -> void:
 	_pos = pos
 	_vel = vel
-
-
-# --- Core spring step ---
 
 func step(
 	delta: float,
